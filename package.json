@@ -1,0 +1,26 @@
+{
+  "name": "fidigames",
+  "version": "1.0.0",
+  "description": "Create fidigames",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "SET NODE_ENV& nodemon app.js"
+  },
+  "author": "Priya",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.4",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui": "^4.10.0",
+    "swagger-ui-express": "^4.3.0"
+  }
+}
