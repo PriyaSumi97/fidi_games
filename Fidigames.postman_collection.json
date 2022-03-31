@@ -1,0 +1,630 @@
+{
+	"info": {
+		"_postman_id": "aae9a3ab-e31c-4bc5-bdc5-61140d528056",
+		"name": "Fidigames",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Games",
+			"item": [
+				{
+					"name": "add_games",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJkaW4iLCJpYXQiOjE2NDg3MDE5OTgsImV4cCI6MTY0ODc0NTE5OH0.FfAx0YzUxgfxRcQYbV86c8Yv_PWmXnuDVqgSOpp-bEk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Giant Rus",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Avoid obstacles and differently colored elements, as they will reduce your strength",
+									"type": "text"
+								},
+								{
+									"key": "game_url",
+									"value": "www.giantrush.com",
+									"type": "text"
+								},
+								{
+									"key": "min_players_count",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "max_players_count",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "fighting",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/krris/OneDrive/Desktop/game images/Giant-Rush-Online.webp"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/fidigames/add_games",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"add_games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_games",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/fidigames/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit_games",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/fidigames/edit?id=30",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterbycategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/fidigames/filter?category=shooting&page=1&limit=",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "shooting"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_games",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "sudokku",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Fight in a multiplayer arena and guild war to become the best sniper assassin in this fun multiplayer.",
+									"type": "text"
+								},
+								{
+									"key": "game_url",
+									"value": "www.sniper3d.com",
+									"type": "text"
+								},
+								{
+									"key": "min_players_count",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "max_players_count",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "shooting",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/krris/OneDrive/Desktop/game images/sniper.jpg"
+								},
+								{
+									"key": "id",
+									"value": "37",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/fidigames/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_games",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "36",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/fidigames/delete?id=36",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "36"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "user_list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/fidigames/user_list?id=2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"user_list"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Priya\",\r\n    \"password\": \"priya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/fidigames/user_login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"user_login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"sowmii\",\r\n    \"email\": \"dw@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"address\": \"salem\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/fidigames/user_register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"user_register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Priyaa\",\r\n    \"email\": \"priyaa@gmail.com\",\r\n    \"password\": \"priya\",\r\n    \"address\": \"erode\",\r\n    \"id\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/fidigames/update_user?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJyYW15YSIsImlhdCI6MTY0ODYyMzE2OSwiZXhwIjoxNjQ4NjY2MzY5fQ.rAAllMYqIdcPhsoTGHR_3sTZSvSgx3NK6VzKRD6bOu4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"update_user"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJyYW15YSIsImlhdCI6MTY0ODYyMzE2OSwiZXhwIjoxNjQ4NjY2MzY5fQ.rAAllMYqIdcPhsoTGHR_3sTZSvSgx3NK6VzKRD6bOu4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/fidigames/delete_user?id=11",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"delete_user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "likes",
+			"item": [
+				{
+					"name": "add_likes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gameId\":1,\r\n    \"userId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/fidigames/addLikes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"addLikes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "add_category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"role-play\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/fidigames/add_category",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"add_category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/fidigames/list_category?id=5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"list_category"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 11,\r\n    \"name\": \"race\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/fidigames/update_category",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"update_category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/fidigames/delete_category?id=11",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"fidigames",
+								"delete_category"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
